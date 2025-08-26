@@ -1,0 +1,5 @@
+AuditLogs
+| where Category == "ApplicationManagement"
+| where OperationName in ("Add app role assignment to service principal", "Add delegated permission grant")
+| project TimeGenerated, InitiatedBy, TargetResources, ActivityDisplayName, Result
+| order by TimeGenerated desc

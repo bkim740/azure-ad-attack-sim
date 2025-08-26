@@ -1,0 +1,6 @@
+AuditLogs
+| where OperationName == "Add member to role"
+| extend targetType = tostring(TargetResources[0].type)
+| where targetType has "ServicePrincipal"
+| project TimeGenerated, InitiatedBy, TargetResources, Result
+| order by TimeGenerated desc

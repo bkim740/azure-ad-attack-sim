@@ -1,0 +1,4 @@
+SigninLogs
+| project TimeGenerated, UserPrincipalName, ResultType, ConditionalAccessStatus, ConditionalAccessPolicies
+| where ConditionalAccessStatus in ("notApplied","reportOnly")
+| order by TimeGenerated desc

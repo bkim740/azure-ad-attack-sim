@@ -1,0 +1,3 @@
+SigninLogs
+| summarize count(), make_set(AppDisplayName), make_set(ClientAppUsed) by UserPrincipalName, IPAddress, tostring(DeviceDetail.operatingSystem), bin(TimeGenerated, 1h)
+| order by TimeGenerated desc

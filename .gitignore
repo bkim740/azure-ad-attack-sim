@@ -1,0 +1,21 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+*.code-workspace
+.vscode/
+.idea/
+
+# Python/Notebooks
+__pycache__/
+.ipynb_checkpoints/
+
+# Evidence/raw exports (keep sanitized outputs only)
+evidence/*raw*
+evidence/*/raw/*
+*.csv
+
+# Secrets (do not commit)
+*.secret
+*.pem
+*.key
+.env
